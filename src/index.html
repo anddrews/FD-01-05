@@ -8,6 +8,16 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body>
+    <div class="left container">left</div>
+    <div class="main container">main</div>
+    <div class="right container">right</div>
+    <div>
+      @@include("./partials/component/_component.html", {"text": "Hello world"})
+      @@include("./partials/component/_component.html", {"text": "Hello Alex"})
+      @@include("./partials/component/_component.html", {"text": "Hello Nick"})
+      @@include("./partials/component/_component.html", {"text": "Hello Natali"})
+      @@include("./partials/component/_component.html", {"text": "Hello Mike"})
+    </div>
   </body>
 </html>
 
