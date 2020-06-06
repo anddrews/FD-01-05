@@ -25,4 +25,24 @@ body {
 
 .main {
   width: 50%;
+  min-width: 400px;
 }
+
+.margin-auto {
+  margin: 20px 0;
+}
+
+.greeting {
+  font-size: 20px;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+.text-align {
+  text-align: center;
+}
+.with-inline {
+  font-size: 20px;
+}
+
