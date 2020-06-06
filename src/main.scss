@@ -1,3 +1,15 @@
 body * {
   outline: 1px solid lightgrey;
 }
+
+.link {
+  color: rgba(0, 0, 0, .5);
+}
+
+#anchor {
+  color: rgb(0, 0, 0);
+}
+
+a {
+  color: rgba(0, 0, 0, .5);
+}
