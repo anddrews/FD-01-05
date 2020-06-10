@@ -1,3 +1,29 @@
 body * {
   outline: 1px solid lightgrey;
 }
+
+.first,
+.second {
+  height: 200px;
+  width: 150px;
+}
+
+.first {
+  float: left;
+}
+
+.second {
+  float: right;
+}
+
+.clearfix:after {
+  content: 'after';
+  clear: both;
+  display: table;
+}
+
+.clearfix:before {
+  content: 'before';
+  clear: both;
+  display: table;
+}
