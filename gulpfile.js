@@ -12,6 +12,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const browsersync = require('browser-sync');
 const fs = require("fs");
+const replace = require('gulp-replace');
 
 const path = {
   dist: {
@@ -79,6 +80,12 @@ const fontsBuild = () => src(path.src.fonts).pipe(dest(path.dist.fonts)).pipe(br
 
 const imgsBuild = () => src(path.src.img).pipe(dest(path.dist.img)).pipe(browsersync.stream());
 const jsBuild = () => src(path.src.js).pipe(dest(path.dist.js)).pipe(browsersync.stream());
+const stylePaths = () => src(`${path.dist.html}/*.html`)
+  .pipe(replace(/(<link rel="stylesheet" href=".\/)(main.)scss(">)/, '$1css/$2css$3'))
+  .pipe(dest(path.dist.html));
+const cssImgsPaths = () => src(`${path.dist.css}/*.css`)
+  .pipe(replace(/(url\(")[.|..\/]+(img\/\D+.\D+"\))/, '$1../../$2'))
+  .pipe(dest(path.dist.css));
 
 const server = () => {
   browsersync.init(serverConfig);
@@ -91,7 +98,12 @@ const server = () => {
   
 };
 
-const build = series(cleanDist, parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, jsBuild));
+const build = series(
+  cleanDist,
+  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, jsBuild),
+  parallel(stylePaths, cssImgsPaths)
+  );
 exports.start = series(build, server);
 exports.clean = series(cleanDist);
 exports.build = series(build);
+
