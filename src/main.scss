@@ -1,3 +1,66 @@
 body * {
   outline: 1px solid lightgrey;
 }
+
+.header {
+  height: 100px;
+  font-size: 30px;
+  text-align: center;
+  background-color: #ab4785;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  color: #000;
+}
+
+.main {
+  margin-top: 100px;
+  height: 100vh;
+}
+
+.relative {
+  width: 100px;
+  height: 100px;
+  background-color: #da2345;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  color: red;
+}
+
+.absolute {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 10px;
+  background-color: #faed34;
+}
+
+
+.phone-icon {
+  position: relative;
+  width: 100px;
+  margin-top: 100px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(226, 24, 24);
+  color: #fff;
+}
