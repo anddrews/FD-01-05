@@ -4,7 +4,7 @@ body * {
 
 .sticky {
   position: sticky;
-  top: 150px;
+  bottom: 150px;
   left: 100%;
   display: inline-block;
   background-color: rgb(22, 211, 22);
@@ -72,4 +72,11 @@ img {
   border-radius: 50%;
   background-color: rgb(226, 24, 24);
   color: #fff;
+}
+
+.background {
+  background-image: url('./img/Phone_icon.png');
+  width: 50px;
+  height: 50px;
+  background-size: contain;
 }
