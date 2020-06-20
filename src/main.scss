@@ -1,3 +1,63 @@
 body * {
   outline: 1px solid lightgrey;
 }
+
+.class {
+  height: 200px;
+}
+
+.class {
+  background-color: #ea2345;
+}
+
+// div {
+//   background-color: #c72f8d;
+// }
+
+#id {
+  background-color: #7f21ea;
+}
+
+.class {
+  background-color: #23ea34;
+}
+
+[class="class"] {
+  background-color: rgb(175, 226, 56) !important;
+}
+
+.container {
+  display: flex;
+  font-size: 25px;
+}
+
+.three-columns {
+  width: 33.3%;
+}
+.class2,
+.class3 {
+  height: 200px;
+  margin: 40px;
+}
+
+.class4 {
+  margin: 20px;
+}
+
+div.class3.class2 {
+  background-color: blue;
+  font-size: 30px;
+}
+
+.class1 .class2 {
+  background-color: #ea2345;
+  color: yellow;
+}
+
+.class1 > .class3 {
+  background-color: #f4ae34;
+}
+
+.class2 + .class3 {
+  background-color: #fb3af5;
+}
