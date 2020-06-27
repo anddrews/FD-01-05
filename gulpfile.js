@@ -64,6 +64,7 @@ const httpBuild = () => src(path.src.html)
     prefix: '@@',
     basepath: '@file'
   }))
+  .pipe(replace(/(<link rel="stylesheet" href=".\/)(main.)scss(">)/, '$1css/$2css$3'))
   .pipe(dest(path.dist.html))
   .pipe(browsersync.stream());
 
@@ -71,6 +72,7 @@ const stylesBuild = () => src(path.src.style)
   .pipe(sourcemaps.init())
   .pipe(plumber())
   .pipe(sass())
+  .pipe(replace(/(url\(")[.|..\/]+(img\/.+\..+"\))/g, '$1../../$2'))
   .pipe(plumber.stop())
   .pipe(sourcemaps.write('./maps/'))
   .pipe(dest(path.dist.css))
@@ -80,12 +82,6 @@ const fontsBuild = () => src(path.src.fonts).pipe(dest(path.dist.fonts)).pipe(br
 
 const imgsBuild = () => src(path.src.img).pipe(dest(path.dist.img)).pipe(browsersync.stream());
 const jsBuild = () => src(path.src.js).pipe(dest(path.dist.js)).pipe(browsersync.stream());
-const stylePaths = () => src(`${path.dist.html}/*.html`)
-  .pipe(replace(/(<link rel="stylesheet" href=".\/)(main.)scss(">)/, '$1css/$2css$3'))
-  .pipe(dest(path.dist.html));
-const cssImgsPaths = () => src(`${path.dist.css}/*.css`)
-  .pipe(replace(/(url\(")[.|..\/]+(img\/\D+.\D+"\))/, '$1../../$2'))
-  .pipe(dest(path.dist.css));
 
 const server = () => {
   browsersync.init(serverConfig);
@@ -100,9 +96,7 @@ const server = () => {
 
 const build = series(
   cleanDist,
-  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, jsBuild),
-  parallel(stylePaths, cssImgsPaths)
-  );
+  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, jsBuild));
 exports.start = series(build, server);
 exports.clean = series(cleanDist);
 exports.build = series(build);
