@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Backstranger';
+  src: url('../fonts/BackstrangerThin.ttf');
+}
+
+@font-face {
+  font-family: 'Backstranger';
+  src: url('../fonts/Backstranger.ttf');
+}
+
+@font-face {
+  font-family: 'Backstranger';
+  src: url('../fonts/BackstrangerThinItalic.ttf');
+  font-style: italic;
+}
+
+
 body * {
   outline: 1px solid lightgrey;
 }
@@ -38,7 +55,7 @@ body * {
   text-decoration: underline;
   font-weight: bold;
   font-style: italic;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: 10px;
   word-spacing: 50px;
   line-height: 100px;
@@ -48,4 +65,7 @@ body * {
 .font div {
   color: #000;
   font-size: 2em;
+  font-family: Backstranger, arial, serif;
+  // font-style: italic;
+  font-weight: bold;
 }
