@@ -1,16 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./main.scss">
-    <title>First project</title>
-    <script src="./js/main.js" defer></script>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./main.scss">
+  <title>First project</title>
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <form action="http://tut.by" method="POST">
+    <label for="input">
+      Имя
+    </label>
+    <input id="input" type="text" name="firstName" disabled="disabled">
+    <label for="">
+      Email
+      <input type="email" placeholder="Please enter email">
+    </label>
+    <label for="">
+      Number
+      <input type="number" min="10" max="12">
+    </label>
+    <label for="">
+      Date
+      <input type="datetime-local">
+    </label>
+    <label for="">
+      color
+      <input type="color">
+    </label>
+    <label for="">
+      Password
+      <input type="password">
+    </label>
+    </label>
+    <label for="radio1">
+      Radio1
+      <input id="radio1" type="radio" name="radio" value="1">
+    </label>
+    </label>
+    <label for="radio2">
+      Radio2
+      <input id="radio2" type="radio" name="radio" value="2">
+    </label>
+    </label>
+    <label for="radio3">
+      Radio3
+      <input id="radio3" type="radio" name="radio" value="3">
+    </label>
+    </label>
+    <label for="checkbox">
+      checkbox
+      <input class="checkbox" id="checkbox" type="checkbox" name="checkbox1">
+    </label>
+    </label>
+    <label for="checkbox1">
+      checkbox1
+      <input class="checkbox" id="checkbox1" type="checkbox" name="checkbox2">
+    </label>
+    <select>
+      <option>First</option>
+      <option>Second</option>
+      <option>Thirt</option>
+    </select>
+    <div class="radio">
+      <input type="radio" id="custom-radio" name="custom" class="radio-input">
+      <div class="radio-label"></div>
+      <label for="custom-radio">Custom Radio1</label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="custom-radio1" name="custom" class="radio-input">
+      <div class="radio-label"></div>
+      <label for="custom-radio1">Custom Radio2</label>
+    </div>
+    <button>Button Submit</button>
+  </form>
+</body>
 </html>
-
-
-
-
