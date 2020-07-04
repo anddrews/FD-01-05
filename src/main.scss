@@ -47,3 +47,9 @@ form {
   background-color: red;
   border-radius: 50%;
 }
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}

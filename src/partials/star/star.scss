@@ -1,0 +1,18 @@
+.star__input {
+    display: none;
+}
+
+.star__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background-color: rgb(179, 167, 167);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    cursor: pointer;
+}
+
+.star__label:hover .star__icon,
+.star__label:hover ~ .star__label .star__icon,
+.star__input:checked ~ .star__label .star__icon {
+    background-color: rgb(235, 220, 15);
+}
