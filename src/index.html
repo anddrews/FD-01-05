@@ -65,17 +65,20 @@
       <option>Second</option>
       <option>Thirt</option>
     </select>
-    <div class="radio">
-      <input type="radio" id="custom-radio" name="custom" class="radio-input">
-      <div class="radio-label"></div>
-      <label for="custom-radio">Custom Radio1</label>
+    <div>
+      @@include('./partials/radio-button/_radio-button.html', {"label": "Овсяная", "name": "porridge"})
+      @@include('./partials/radio-button/_radio-button.html', {"label": "Гречневая", "name": "porridge"})
+      @@include('./partials/radio-button/_radio-button.html', {"label": "Манная", "name": "porridge"})
     </div>
-    <div class="radio">
-      <input type="radio" id="custom-radio1" name="custom" class="radio-input">
-      <div class="radio-label"></div>
-      <label for="custom-radio1">Custom Radio2</label>
+    <div>
+      @@include('./partials/radio-button/_radio-button.html', {"label": "Свинина", "name": "meat"})
+      @@include('./partials/radio-button/_radio-button.html', {"label": "Говядина", "name": "meat"})
+      @@include('./partials/radio-button/_radio-button.html', {"label": "Баранина", "name": "meat"})
     </div>
-    <button>Button Submit</button>
+    <div class="rating">
+      @@include('./partials/star/_star.html', {"rate": 1})
+    </div>
+    <button>Button Submit</button2>
   </form>
 </body>
 </html>
