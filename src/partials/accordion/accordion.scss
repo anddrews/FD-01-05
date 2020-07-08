@@ -24,7 +24,7 @@
 }
 
 .accordion-status ~ .accordion-content {
-    max-height: 0;
+    max-height: 100px;
     transition: max-height .5s ease;
 }
 
@@ -35,4 +35,20 @@
 
 .accordion-status:checked ~ .accordion-opener:after {
     transform: rotate(180deg);
+}
+
+.accordion-status:checked ~ .accordion-opener .open {
+    display: block;
+}
+
+.accordion-status:checked ~ .accordion-opener .close {
+    display: none;
+}
+
+.accordion-status ~ .accordion-opener .open {
+    display: none;
+}
+
+.accordion-status ~ .accordion-opener .close {
+    display: block;
 }
