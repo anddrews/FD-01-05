@@ -1,0 +1,38 @@
+.accordion-content {
+    overflow: hidden;
+}
+
+.accordion-opener {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-opener:after {
+    content: '\f107';
+    font-family: FontAwesome;
+    margin-right: 10px;
+    transition: transform .5s ease;
+}
+
+
+.accordion-status {
+    display: none;
+}
+
+.accordion-status ~ .accordion-content {
+    max-height: 0;
+    transition: max-height .5s ease;
+}
+
+.accordion-status:checked ~ .accordion-content {
+    max-height: 900px;
+    transition: max-height .5s ease;
+}
+
+.accordion-status:checked ~ .accordion-opener:after {
+    transform: rotate(180deg);
+}

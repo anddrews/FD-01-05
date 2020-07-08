@@ -1,3 +1,22 @@
+@import './font-awesome.min.scss';
+@import './partials/accordion/accordion.scss';
+
+@font-face {
+  font-family: FontAwesome;
+  src: url('../fonts/fontawesome.webfont.woff')
+}
+
 body * {
   outline: 1px solid lightgrey;
+}
+
+.font-awesome {
+  font-size: 30px;
+  color: red;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.accordion {
+  width: 300px;
 }
