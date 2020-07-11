@@ -1,0 +1,25 @@
+.section-header {
+    display: flex;
+    align-items: baseline;
+}
+
+.section-text {
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.section-header:after {
+    content: 'kfsdfksdfljk';
+    display: block;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.section-header.secondary .section-text {
+    color: #1f96e6;
+    font-size: 30px;
+}
+
+.section-header.secondary:after {
+    border-color: rgb(199, 9, 9);
+}

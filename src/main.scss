@@ -1,3 +1,74 @@
+@import './partials/section-header/section-header.scss';
+
 body * {
   outline: 1px solid lightgrey;
+}
+
+.section-header1 {
+  display: flex;
+  font-size: 36px;
+  align-items: baseline;
+}
+
+.header-text1 {
+  padding-right: 4px;
+}
+
+.blue {
+  color: rgb(69, 69, 226);
+}
+
+.green {
+  color: rgb(58, 224, 58);
+}
+
+.header-line1 {
+  border-bottom: 3px solid #000;
+  flex: 1 0 auto;
+}
+
+.section-header2 {
+  font-size: 36px;
+  position: relative;
+}
+
+.header-text2 {
+  padding-right: 40px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.section-header2:before {
+  content: "";
+  display: block;
+  width: calc(100% - 10px);
+  border-bottom: 3px solid #000;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  z-index: -1;
+}
+
+.green.section-header2:before {
+  border-color: #dacd34;
+}
+.blue.section-header2:before {
+  border-color: #198d40;
+}
+
+.section-header2.center {
+  text-align: center;
+}
+
+.section-header2.center:before {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.section-header2.right {
+  text-align: right;
+}
+
+.section-header1.right {
+  flex-direction: row-reverse;
 }
