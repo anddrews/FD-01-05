@@ -1,3 +1,54 @@
 body * {
-  outline: 1px solid lightgrey;
+  // outline: 1px solid lightgrey;
+}
+
+.tile {
+  border: 2px solid rgb(73, 73, 206);
+  border-radius: 5px;
+  min-height: 150px;
+  background-color: burlywood;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .row-gutter {
+    padding-top: 30px;
+  }
+}
+.col-gutter {
+  padding-top: 30px;
+}
+
+@media (min-width: 568px) and (max-width:992px) {
+  .col-gutter {
+    padding-top: 0;
+  }
+}
+
+.opacity:hover {
+  opacity: .5;
+  position: relative;
+  bottom: 2px;
+  left: 2px;
+}
+
+.table {
+  display: table;
+  width: 200px;
+}
+
+.table-row  {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  width: 200px;
+  height: 200px;
+  vertical-align: middle;
+}
+
+.tile {
+  box-shadow: 10px 10px 10px red,
+   -17px 47px 43px 5px rgba(0,0,0,0.75); 
 }
