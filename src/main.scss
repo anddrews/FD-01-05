@@ -1,3 +1,73 @@
 body * {
-  outline: 1px solid lightgrey;
+  // outline: 1px solid lightgrey;
+}
+#burger {
+  display: none;
+}
+
+.burger {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.burger__button {
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.burger__button:before,
+.burger__button:after {
+  content: '';
+  display: block;
+}
+
+.burger__button:before,
+.burger__button:after,
+.burger__line {
+  border-bottom: 3px solid #000;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item {
+  padding: 5px 15px;
+  margin: 0 10px;
+  border: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+  .burger__button {
+    display: flex;
+  }
+
+  #burger ~ .burger__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+
+  #burger:checked ~ .burger__menu {
+    display: block;
+    width: 300px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu__item {
+    margin: 5px 0;
+  }
 }
