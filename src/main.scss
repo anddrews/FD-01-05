@@ -1,3 +1,17 @@
 body * {
-  outline: 1px solid lightgrey;
+  // outline: 1px solid lightgrey;
+}
+
+.carusel-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel__item {
+  margin: 30px;
+  border: 1px solid #000;
+}
+
+.slick-arrow:before {
+  background-color: lightgrey;
 }
