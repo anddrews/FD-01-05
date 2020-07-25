@@ -1,0 +1,18 @@
+$main-color: rgb(84, 23, 197);
+$secondary-color: #19b359;
+
+@mixin main-font {
+    font-size: 16px;
+    color: $main-color;
+}
+
+@mixin header-font {
+    font-size: 24px;
+    color: $main-color;
+}
+
+@mixin mobile {
+    @media screen and (max-width: 400px) {
+        @content;
+    }
+}

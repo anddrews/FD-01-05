@@ -1,3 +1,35 @@
+@import './variables.scss';
+
 body * {
   outline: 1px solid lightgrey;
+}
+
+.article {
+  display: block;
+  margin: 30px;
+
+  &.big {
+    background-color: rgb(233, 148, 148);
+  }
+
+  &__header {
+    border-bottom: 2px solid $main-color;
+
+    @include header-font;
+
+    @include mobile {
+      color: red;
+    }
+    
+    &--secondary {
+      color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    
+    @include main-font;
+  }
 }
