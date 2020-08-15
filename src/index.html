@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Lato">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.scss">
     <title>First project</title>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
+    <div class="main-content">
+      @@include('./partials/main-menu/_main-menu.html')
+      @@include('./partials/hero/_hero.html')
+      @@include('./partials/portfolio/_portfolio.html')
+      @@include('./partials/about-us/_about-us.html')
+    </div>
   </body>
 </html>
 
