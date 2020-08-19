@@ -6,7 +6,7 @@
 @import "./partials/about-us/about-us.scss";
 
 body * {
-  // outline: 1px solid lightgrey;
+  outline: 1px solid lightgrey;
 }
 
 .main-content {
@@ -17,4 +17,25 @@ body * {
 
 .section {
   padding: 55px 0 70px 0;
+}
+
+.first {
+  margin-bottom: 100px;
+}
+
+.second {
+  margin-top: 50px;
+}
+
+.wrapper {
+  border: .1px solid transparent;
+}
+
+.parent {
+  width: 100px;
+}
+
+.child {
+  padding: calc(20vh - 50%);
+  font-size: calc(1em + 2vh);
 }
