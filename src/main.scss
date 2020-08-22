@@ -61,3 +61,28 @@ body * {
     align-items: center;
   }
 }
+
+
+#anchor {
+  background-color: purple;
+}
+
+.anchor {
+  background-color: red;
+}
+
+div {
+  background-color: green;
+}
+
+.anchor.blue {
+  background-color: blue;
+}
+
+.anchor {
+  background-color: yellow;
+}
+
+* {
+  background-color: #adec45;
+}
